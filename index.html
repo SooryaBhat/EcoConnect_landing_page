@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoConnect-X — Smart Waste Monitoring & Recycling Platform</title>
+  <meta name="description" content="IoT-enabled smart waste management ecosystem integrating smart bins, cloud backend, real-time dashboards, and recycling workflows for urban municipalities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="logo-mark">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="var(--green)" stroke-width="1.5"/><path d="M8 14c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/><path d="M10 18l4-4 4 4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="19" r="1.5" fill="var(--green)"/></svg>
+        </div>
+        <span>EcoConnect<span class="accent">-X</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#workflow">Architecture</a></li>
+        <li><a href="#iot">Smart Bin</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#dashboards">Dashboards</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://eco-connect-1-cy88.onrender.com" target="_blank" class="btn btn-sm btn-primary">Live Demo →</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-noise"></div>
+      <div class="hero-glow g1"></div>
+      <div class="hero-glow g2"></div>
+      <div class="hero-grid-lines"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        IoT-Enabled Smart City Project
+      </div>
+      <h1 class="hero-title reveal">
+        Smart Waste.<br/>
+        <span class="accent gradient-text">Real Connections.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        EcoConnect-X connects citizens, collectors, recyclers, and government
+        through IoT smart bins and a unified web platform — making urban waste
+        management trackable, transparent, and efficient.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="https://eco-connect-1-cy88.onrender.com" target="_blank" class="btn btn-primary btn-lg">
+          <span>View Live Demo</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://github.com/SooryaBhat/Eco_Connect" target="_blank" class="btn btn-outline btn-lg">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub Repo
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><strong>4</strong><span>Stakeholder Roles</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>3</strong><span>Languages</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>ESP32</strong><span>IoT Hardware</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>Real-Time</strong><span>Bin Monitoring</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About the Project</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">What is EcoConnect-X?</h2>
+          <p>EcoConnect-X is an IoT-based waste management platform built for urban and semi-urban municipalities. Smart dustbins equipped with ESP32 microcontrollers and load cells measure waste weight and transmit live data to a Flask backend over WiFi.</p>
+          <p>The platform connects four stakeholders — citizens, collectors, recyclers, and government — through dedicated role-based dashboards. Citizens report complaints and sell recyclable waste. Collectors track bin fill levels and daily tasks. Recyclers browse the waste marketplace. Government authorities monitor regional analytics and bin requests.</p>
+          <p>Built as a practical engineering project, EcoConnect-X demonstrates how affordable IoT hardware combined with a clean web backend can bring real visibility to a city's waste ecosystem.</p>
+          <div class="about-links">
+            <a href="https://eco-connect-1-cy88.onrender.com" target="_blank" class="btn btn-primary">Explore Live Platform →</a>
+            <a href="https://github.com/SooryaBhat/Eco_Connect" target="_blank" class="btn btn-ghost">Source Code</a>
+          </div>
+        </div>
+        <div class="about-cards reveal">
+          <div class="about-card">
+            <div class="acard-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>IoT Hardware Layer</h4>
+            <p>ESP32 + load cells + HX711 measure bin fill weight and push data via WiFi to the cloud backend.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--green)" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h4>Flask + MySQL Backend</h4>
+            <p>A lightweight Python Flask server handles all business logic, with MySQL for persistent data storage.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2" stroke="var(--green)" stroke-width="1.5"/><circle cx="19" cy="5" r="2" stroke="var(--green)" stroke-width="1.5"/><circle cx="19" cy="19" r="2" stroke="var(--green)" stroke-width="1.5"/><path d="M7 12h5m2-5l-5 4m5 3l-5-4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h4>Multi-Stakeholder Platform</h4>
+            <p>Separate dashboards and workflows for citizens, collectors, recyclers, and government — all in one system.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--green)" stroke-width="1.5"/><path d="M12 3a15 15 0 010 18M3 12h18" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h4>Multilingual Interface</h4>
+            <p>Supports English, Kannada, and Tulu — making the platform accessible to local communities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM WORKFLOW -->
+  <section class="section section-alt" id="workflow">
+    <div class="container">
+      <div class="section-label reveal">System Architecture</div>
+      <h2 class="section-title text-center reveal">How the System Works</h2>
+      <p class="section-sub text-center reveal">From a physical dustbin to a government dashboard — the complete data flow.</p>
+      <div class="workflow-container reveal">
+        <div class="wf-chain">
+          <div class="wf-node hw-node">
+            <div class="wf-node-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="7" y="5" width="16" height="20" rx="2" stroke="var(--green)" stroke-width="1.5"/><path d="M10 5V3h10v2" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/><path d="M11 13h8M11 17h5" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/><circle cx="15" cy="10" r="2" stroke="var(--green)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="wf-node-tag">Hardware</div>
+            <h4>Smart Dustbin</h4>
+            <p>Load Cell + HX711 measures waste weight</p>
+          </div>
+          <div class="wf-connector">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="wf-conn-label">Sensor Data</span>
+          </div>
+          <div class="wf-node hw-node">
+            <div class="wf-node-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="8" y="10" width="14" height="11" rx="2" stroke="var(--green)" stroke-width="1.5"/><path d="M11 10V8a4 4 0 018 0v2" stroke="var(--green)" stroke-width="1.5"/><circle cx="15" cy="15.5" r="2" fill="var(--green)"/><path d="M4 13c0 0 2-1 4-1M26 13c0 0-2-1-4-1" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="wf-node-tag">Hardware</div>
+            <h4>ESP32</h4>
+            <p>MCU with built-in WiFi — transmits bin data</p>
+          </div>
+          <div class="wf-connector">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="wf-conn-label">WiFi Upload</span>
+          </div>
+          <div class="wf-node cloud-node">
+            <div class="wf-node-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M8 22a5 5 0 01-.5-10A7 7 0 0122 16a4 4 0 010 6H8z" stroke="var(--green)" stroke-width="1.5"/><path d="M15 26V19M12 22l3-3 3 3" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="wf-node-tag">Backend</div>
+            <h4>Flask Backend</h4>
+            <p>Python REST API — handles all logic</p>
+          </div>
+          <div class="wf-connector">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="wf-conn-label">SQL Queries</span>
+          </div>
+          <div class="wf-node cloud-node">
+            <div class="wf-node-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><ellipse cx="15" cy="9" rx="9" ry="4" stroke="var(--green)" stroke-width="1.5"/><path d="M6 9v6c0 2.21 4.03 4 9 4s9-1.79 9-4V9" stroke="var(--green)" stroke-width="1.5"/><path d="M6 15v6c0 2.21 4.03 4 9 4s9-1.79 9-4v-6" stroke="var(--green)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="wf-node-tag">Backend</div>
+            <h4>MySQL Database</h4>
+            <p>Persistent storage for all platform data</p>
+          </div>
+        </div>
+        <div class="wf-down">
+          <div class="wf-down-line"></div>
+          <div class="wf-down-label">EcoConnect-X Platform</div>
+          <div class="wf-down-line"></div>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M6 12l4 4 4-4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="wf-stakeholders">
+          <div class="wf-stake user-stake">
+            <div class="stake-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="9" r="4" stroke="var(--blue)" stroke-width="1.5"/><path d="M5 23c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <strong>Citizen</strong><span>Report · Sell Waste</span>
+          </div>
+          <div class="wf-stake coll-stake">
+            <div class="stake-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="2" y="10" width="16" height="10" rx="2" stroke="var(--orange)" stroke-width="1.5"/><path d="M5 10V7a5 5 0 0110 0v3" stroke="var(--orange)" stroke-width="1.5"/><circle cx="21" cy="18" r="3" stroke="var(--orange)" stroke-width="1.5"/><circle cx="7" cy="20" r="2" stroke="var(--orange)" stroke-width="1.5"/></svg></div>
+            <strong>Collector</strong><span>Tasks · Route</span>
+          </div>
+          <div class="wf-stake rec-stake">
+            <div class="stake-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3l3 7h7l-5.5 4 2 7L13 17l-6.5 4 2-7L3 10h7z" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+            <strong>Recycler</strong><span>Buy · Process</span>
+          </div>
+          <div class="wf-stake govt-stake">
+            <div class="stake-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 23h20M5 23V14M21 23V14M9 23V18h8v5M13 3l10 11H3L13 3z" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <strong>Government</strong><span>Monitor · Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART BIN / IoT -->
+  <section class="section" id="iot">
+    <div class="container">
+      <div class="section-label reveal">IoT Hardware</div>
+      <div class="iot-grid">
+        <div class="iot-images reveal">
+          <div class="iot-img-main">
+            <img src="assets/images/dustbin_outside.jpeg" alt="Smart Dustbin Prototype — Exterior" loading="lazy" />
+            <div class="img-badge">Prototype Unit</div>
+          </div>
+          <div class="iot-img-secondary">
+            <img src="assets/images/dustbin_inside.jpeg" alt="Smart Dustbin Interior — ESP32 and Load Cell" loading="lazy" />
+            <div class="img-badge">ESP32 + Load Cell Inside</div>
+          </div>
+        </div>
+        <div class="iot-text reveal">
+          <h2 class="section-title">The Smart Bin Hardware</h2>
+          <p>Each smart bin is fitted with a load cell connected to an HX711 amplifier and an ESP32 microcontroller. The ESP32 reads waste weight continuously and pushes that data over WiFi to the Flask backend at regular intervals.</p>
+          <p>The hardware is low-cost, compact, and designed to fit inside a standard dustbin — practical for real-world municipal deployment without heavy infrastructure.</p>
+          <div class="spec-grid">
+            <div class="spec-item">
+              <div class="spec-badge hw">MCU</div>
+              <div class="spec-info"><strong>ESP32</strong><span>Dual-core, built-in WiFi — brain of the bin</span></div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-badge hw">Sensor</div>
+              <div class="spec-info"><strong>Load Cell + HX711</strong><span>Accurate waste weight measurement</span></div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-badge cloud">Comms</div>
+              <div class="spec-info"><strong>WiFi Data Transfer</strong><span>Pushes bin status to cloud in real time</span></div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-badge cloud">Design</div>
+              <div class="spec-info"><strong>Low-Cost & Scalable</strong><span>Affordable enough for city-wide deployment</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-label reveal">Platform Features</div>
+      <h2 class="section-title text-center reveal">What the Platform Does</h2>
+      <p class="section-sub text-center reveal">A focused set of tools covering the complete waste management lifecycle.</p>
+      <div class="features-grid">
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="2" y="6" width="22" height="14" rx="3" stroke="var(--green)" stroke-width="1.5"/><path d="M6 13h3l2-4 3 8 2-4h4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Real-Time Bin Monitoring</h3>
+          <p>Track fill levels of smart bins across locations as data arrives live from the IoT hardware layer.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3l-9 4v8c0 5 3.5 9.7 9 11 5.5-1.3 9-6 9-11V7l-9-4z" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 13l2.5 2.5L17 10" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Complaint Management</h3>
+          <p>Citizens file complaints about bins or collection issues. Collectors and government can track and resolve them.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 7h18M4 13h12M4 19h8" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="19" r="4" stroke="var(--green)" stroke-width="1.5"/><path d="M20.5 19h3M22 17.5v3" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Waste Selling Marketplace</h3>
+          <p>Citizens list recyclables for sale. Recyclers browse and purchase — closing the loop on valuable materials.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="2" y="4" width="22" height="18" rx="3" stroke="var(--green)" stroke-width="1.5"/><path d="M6 11h4v7H6zM12 8h4v10h-4zM18 14h2v4h-2z" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <h3>Collector Dashboard</h3>
+          <p>Daily task management, bin request tracking, complaint handling, and route overview for waste collectors.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 2L3 7v7c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/><circle cx="13" cy="13" r="3" stroke="var(--green)" stroke-width="1.5"/></svg></div>
+          <h3>Government Dashboard</h3>
+          <p>Regional analytics, waste transaction records, bin request approvals, and system-wide oversight for authorities.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M2 20l7-7 4 4 7-9" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="4" r="2" fill="var(--green)"/></svg></div>
+          <h3>Regional Analytics</h3>
+          <p>Charts and summaries covering waste volumes, collection trends, and regional performance over time.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="11" stroke="var(--green)" stroke-width="1.5"/><path d="M13 2a17 17 0 010 22M2 13h22" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Multilingual Support</h3>
+          <p>Interface in English, Kannada, and Tulu — designed for accessibility in coastal Karnataka.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="11" stroke="var(--green)" stroke-width="1.5"/><path d="M9 13l2 2 5-5" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="7" r="1.5" fill="var(--green)"/></svg></div>
+          <h3>Map-Based Monitoring</h3>
+          <p>Leaflet GIS map view for collectors to visualize bin locations and plan efficient pickup routes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USER ROLES -->
+  <section class="section" id="roles">
+    <div class="container">
+      <div class="section-label reveal">User Roles</div>
+      <h2 class="section-title text-center reveal">Role-Based Workflows</h2>
+      <p class="section-sub text-center reveal">Each stakeholder gets a tailored interface suited to their responsibilities.</p>
+      <div class="roles-grid">
+
+        <div class="role-card reveal user-card">
+          <div class="role-head">
+            <div class="role-icon user-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 18c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div><h3>Citizen</h3><span class="role-tag">End User</span></div>
+          </div>
+          <div class="role-ss">
+            <img src="assets/images/dashboard1_user.png" alt="Citizen Dashboard" loading="lazy" />
+          </div>
+          <ul class="role-list">
+            <li>View nearby bin fill levels</li>
+            <li>Submit complaints about bins</li>
+            <li>List recyclable waste for sale</li>
+            <li>Request new bin installations</li>
+            <li>Track collection status</li>
+          </ul>
+        </div>
+
+        <div class="role-card reveal coll-card">
+          <div class="role-head">
+            <div class="role-icon coll-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="8" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 8V5.5a4 4 0 018 0V8" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="14" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div><h3>Collector</h3><span class="role-tag">Field Worker</span></div>
+          </div>
+          <div class="role-ss">
+            <img src="assets/images/dashboard_coll.png" alt="Collector Dashboard" loading="lazy" />
+          </div>
+          <ul class="role-list">
+            <li>View assigned daily tasks</li>
+            <li>Check bin fill status</li>
+            <li>Manage received complaints</li>
+            <li>View map of bin locations</li>
+            <li>Mark collections as complete</li>
+          </ul>
+        </div>
+
+        <div class="role-card reveal rec-card">
+          <div class="role-head">
+            <div class="role-icon rec-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 8l-3 5h4l-1.5 4 7-7h-4l1.5-4-4 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><h3>Recycler</h3><span class="role-tag">Processor</span></div>
+          </div>
+          <div class="role-ss">
+            <img src="assets/images/dashboard_rec.png" alt="Recycler Dashboard" loading="lazy" />
+          </div>
+          <ul class="role-list">
+            <li>Browse waste listings</li>
+            <li>Purchase recyclable waste</li>
+            <li>Request bin installation</li>
+            <li>Track transactions</li>
+            <li>Manage waste inventory</li>
+          </ul>
+        </div>
+
+        <div class="role-card reveal govt-card">
+          <div class="role-head">
+            <div class="role-icon govt-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18h16M4 18V12M16 18V12M7 18v-4h6v4M10 2l8 10H2L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><h3>Government</h3><span class="role-tag">Authority</span></div>
+          </div>
+          <div class="role-ss">
+            <img src="assets/images/dashboard_govt.png" alt="Government Dashboard" loading="lazy" />
+          </div>
+          <ul class="role-list">
+            <li>Regional waste analytics</li>
+            <li>Monitor bin requests</li>
+            <li>Review system-wide complaints</li>
+            <li>View waste transactions</li>
+            <li>Track collection performance</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD SHOWCASE -->
+  <section class="section section-alt" id="dashboards">
+    <div class="container">
+      <div class="section-label reveal">Platform Screens</div>
+      <h2 class="section-title text-center reveal">Dashboard Showcase</h2>
+      <p class="section-sub text-center reveal">Actual screens from the deployed EcoConnect-X application.</p>
+      <div class="showcase-tabs reveal" role="tablist">
+        <button class="tab-btn active" data-tab="citizen">Citizen</button>
+        <button class="tab-btn" data-tab="collector">Collector</button>
+        <button class="tab-btn" data-tab="recycler">Recycler</button>
+        <button class="tab-btn" data-tab="government">Government</button>
+      </div>
+      <div class="showcase-panels">
+
+        <div class="showcase-panel active" id="tab-citizen">
+          <div class="showcase-row">
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/dashboard2_user.png" alt="Citizen Dashboard Overview" loading="lazy" />
+              <div class="ss-label">Citizen Dashboard</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/submit_complain.png" alt="Submit Complaint" loading="lazy" />
+              <div class="ss-label">Submit a Complaint</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/list_waste_user.png" alt="List Waste for Sale" loading="lazy" />
+              <div class="ss-label">List Waste for Sale</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-panel" id="tab-collector">
+          <div class="showcase-row">
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/dashboard_daily_task_coll.png" alt="Collector Daily Tasks" loading="lazy" />
+              <div class="ss-label">Daily Task View</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/gis_map_coll.png" alt="Map-Based Bin View" loading="lazy" />
+              <div class="ss-label">Map-Based Bin View</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/complaint_received_coll.png" alt="Complaints Received" loading="lazy" />
+              <div class="ss-label">Complaints Received</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-panel" id="tab-recycler">
+          <div class="showcase-row">
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/buy_waste_rec.png" alt="Buy Waste Marketplace" loading="lazy" />
+              <div class="ss-label">Waste Marketplace</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/list_waste.png" alt="Waste Listings" loading="lazy" />
+              <div class="ss-label">Waste Listings</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/req_bin_user_rec.png" alt="Request a Bin" loading="lazy" />
+              <div class="ss-label">Request Bin Installation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-panel" id="tab-government">
+          <div class="showcase-row">
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/analytics1_govt_coll.png" alt="Regional Analytics" loading="lazy" />
+              <div class="ss-label">Regional Analytics</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/dashboard_govt.png" alt="Government Dashboard" loading="lazy" />
+              <div class="ss-label">Government Dashboard</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/bin_requests_govt.png" alt="Bin Requests Overview" loading="lazy" />
+              <div class="ss-label">Bin Requests Overview</div>
+            </div>
+          </div>
+          <div class="showcase-row" style="margin-top:1.25rem">
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/complaint_received_govt.png" alt="Complaints Received by Govt" loading="lazy" />
+              <div class="ss-label">Complaints Overview</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/waste_transaction_govt.png" alt="Waste Transactions" loading="lazy" />
+              <div class="ss-label">Waste Transactions</div>
+            </div>
+            <div class="ss-frame">
+              <div class="ss-chrome"><span></span><span></span><span></span></div>
+              <img src="assets/images/create_bin_user_rec.png" alt="Create Bin Request" loading="lazy" />
+              <div class="ss-label">Create Bin Request</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART CITY MONITORING -->
+  <section class="section" id="smartcity">
+    <div class="container">
+      <div class="section-label reveal">Smart City Support</div>
+      <div class="smartcity-grid">
+        <div class="smartcity-text reveal">
+          <h2 class="section-title">Beyond the Bin</h2>
+          <p>EcoConnect-X includes map-based monitoring to help collectors visualize bin locations across an area — useful for planning efficient pickup routes without needing a full GPS optimization system.</p>
+          <p>The government dashboard provides regional visibility into collection activity, complaint patterns, and bin usage trends — practical smart-city monitoring tools that complement the core IoT workflow.</p>
+          <div class="sc-highlights">
+            <div class="sc-item"><div class="sc-dot"></div><span>Leaflet GIS map integration for bin route overview</span></div>
+            <div class="sc-item"><div class="sc-dot"></div><span>Regional analytics charts for government oversight</span></div>
+            <div class="sc-item"><div class="sc-dot"></div><span>Satellite-layer map view for area monitoring</span></div>
+            <div class="sc-item"><div class="sc-dot"></div><span>Collection trend tracking and performance data</span></div>
+          </div>
+        </div>
+        <div class="smartcity-imgs reveal">
+          <div class="sc-img-card main-sc">
+            <img src="assets/images/gis_map_coll.png" alt="Map-based bin monitoring — Leaflet GIS" loading="lazy" />
+            <div class="sc-img-label">GIS Map — Bin Locations</div>
+          </div>
+          <div class="sc-img-card secondary-sc">
+            <img src="assets/images/setelite_govt.png" alt="Satellite map view" loading="lazy" />
+            <div class="sc-img-label">Satellite Map View</div>
+          </div>
+          <div class="sc-img-card secondary-sc">
+            <img src="assets/images/ai_prediction_govt_coll.png" alt="Analytics and prediction dashboard" loading="lazy" />
+            <div class="sc-img-label">Analytics Dashboard</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section section-alt" id="tech">
+    <div class="container">
+      <div class="section-label reveal">Technology</div>
+      <h2 class="section-title text-center reveal">Built With</h2>
+      <p class="section-sub text-center reveal">Practical, well-chosen tools — nothing over-engineered.</p>
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M17 3l11 6v13L17 28 6 22V9L17 3z" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/><path d="M17 3v25M6 9l11 7 11-7" stroke="var(--green)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <div class="tech-name">Python / Flask</div>
+          <div class="tech-role">Backend</div>
+          <div class="tech-desc">REST API, routing, and all server-side business logic</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><ellipse cx="17" cy="10" rx="11" ry="4.5" stroke="var(--green)" stroke-width="1.5"/><path d="M6 10v7c0 2.485 4.925 4.5 11 4.5S28 19.485 28 17v-7" stroke="var(--green)" stroke-width="1.5"/><path d="M6 17v7c0 2.485 4.925 4.5 11 4.5S28 26.485 28 24v-7" stroke="var(--green)" stroke-width="1.5"/></svg></div>
+          <div class="tech-name">MySQL</div>
+          <div class="tech-role">Database</div>
+          <div class="tech-desc">Relational storage for bins, users, complaints, and transactions</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><rect x="10" y="12" width="14" height="12" rx="2" stroke="var(--green)" stroke-width="1.5"/><path d="M13 12V9.5a4 4 0 018 0V12" stroke="var(--green)" stroke-width="1.5"/><circle cx="17" cy="18" r="2" fill="var(--green)"/><path d="M5 16c0 0 2-1.5 4-1.5M29 16c0 0-2-1.5-4-1.5" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="tech-name">ESP32</div>
+          <div class="tech-role">IoT Hardware</div>
+          <div class="tech-desc">Microcontroller with built-in WiFi driving the smart bin hardware</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M11 29l4.5-25 4 15 4-8 2 8 4.5-15" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="tech-name">HX711 + Load Cell</div>
+          <div class="tech-role">Sensor</div>
+          <div class="tech-desc">Precise weight sensing for measuring bin fill level</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><rect x="4" y="7" width="26" height="18" rx="3" stroke="var(--green)" stroke-width="1.5"/><path d="M12 29h10M17 25v4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/><path d="M10 15h14M10 19h9" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="tech-name">HTML / CSS / JS</div>
+          <div class="tech-role">Frontend</div>
+          <div class="tech-desc">Jinja2 templates, Bootstrap, custom dashboards per role</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="13" stroke="var(--green)" stroke-width="1.5"/><path d="M17 4a21 21 0 010 26M4 17h26" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="tech-name">Leaflet GIS</div>
+          <div class="tech-role">Mapping</div>
+          <div class="tech-desc">Interactive map for bin location visualization and route overview</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M7 29V17l10-12 10 12v12" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="20" width="8" height="9" rx="1" stroke="var(--green)" stroke-width="1.5"/></svg></div>
+          <div class="tech-name">Bootstrap</div>
+          <div class="tech-role">UI Framework</div>
+          <div class="tech-desc">Responsive grid and UI components across all role dashboards</div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M8 27V15l9-9 9 9v12" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 27v-8h8v8" stroke="var(--green)" stroke-width="1.5"/><path d="M17 10v4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="tech-name">Render</div>
+          <div class="tech-role">Deployment</div>
+          <div class="tech-desc">Cloud hosting platform — the platform is live and accessible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MULTILINGUAL -->
+  <section class="section" id="multilingual">
+    <div class="container">
+      <div class="section-label reveal">Language Support</div>
+      <div class="lang-grid">
+        <div class="lang-text reveal">
+          <h2 class="section-title">Three Languages, One Platform</h2>
+          <p>EcoConnect-X supports English, Kannada, and Tulu — the three primary languages spoken in coastal Karnataka. This makes the platform usable by a much wider range of citizens, including those not comfortable with English-only interfaces.</p>
+          <p>Language accessibility is a core design decision. All key workflows — complaints, waste listing, and bin requests — are available in the local language.</p>
+          <div class="lang-badges">
+            <div class="lang-badge"><span class="lang-flag">EN</span><span>English</span></div>
+            <div class="lang-badge"><span class="lang-flag">ಕ</span><span>Kannada</span></div>
+            <div class="lang-badge"><span class="lang-flag">ತು</span><span>Tulu</span></div>
+          </div>
+        </div>
+        <div class="lang-imgs reveal">
+          <div class="lang-img-frame portrait-frame">
+            <img src="assets/images/analytics3_govt_coll.jpeg" alt="Mobile multilingual view" loading="lazy" />
+            <div class="img-badge">Mobile View</div>
+          </div>
+          <div class="lang-img-frame landscape-frame">
+            <img src="assets/images/login.png" alt="Login screen with language selection" loading="lazy" />
+            <div class="img-badge">Login — Language Select</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE SCOPE -->
+  <section class="section section-alt" id="future">
+    <div class="container">
+      <div class="section-label reveal">Roadmap</div>
+      <h2 class="section-title text-center reveal">Future Scope</h2>
+      <p class="section-sub text-center reveal">What comes next as the project scales beyond the prototype stage.</p>
+      <div class="future-grid">
+        <div class="future-card reveal">
+          <span class="future-num">01</span>
+          <h4>Improved Sensor Calibration</h4>
+          <p>Better calibration methods for load cells across different bin sizes and waste types to improve accuracy.</p>
+        </div>
+        <div class="future-card reveal">
+          <span class="future-num">02</span>
+          <h4>Mobile Application</h4>
+          <p>Dedicated Android/iOS app for citizens and collectors with push notifications for bin status alerts.</p>
+        </div>
+        <div class="future-card reveal">
+          <span class="future-num">03</span>
+          <h4>GPS Route Optimization</h4>
+          <p>Integrate actual GPS tracking with optimized routing algorithms for waste collectors on the field.</p>
+        </div>
+        <div class="future-card reveal">
+          <span class="future-num">04</span>
+          <h4>Advanced Analytics</h4>
+          <p>Trend-based reporting and data exports for municipal planning, auditing, and performance reviews.</p>
+        </div>
+        <div class="future-card reveal">
+          <span class="future-num">05</span>
+          <h4>Full Municipal Deployment</h4>
+          <p>Scale to city-level deployment with multi-zone support, admin tiers, and municipal system integration.</p>
+        </div>
+        <div class="future-card reveal">
+          <span class="future-num">06</span>
+          <h4>Waste Category Detection</h4>
+          <p>Basic sensor differentiation between wet and dry waste categories at the hardware level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="cta-bg"><div class="cta-glow"></div><div class="cta-noise"></div></div>
+    <div class="container cta-inner reveal">
+      <div class="cta-badge">Live &amp; Deployed</div>
+      <h2>See EcoConnect-X in Action</h2>
+      <p>The platform is deployed and running. Explore the dashboards and workflows yourself — no signup needed to browse.</p>
+      <div class="cta-btns">
+        <a href="https://eco-connect-1-cy88.onrender.com" target="_blank" class="btn btn-primary btn-xl">
+          Open Live Demo
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://github.com/SooryaBhat/Eco_Connect" target="_blank" class="btn btn-outline btn-xl">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="var(--green)" stroke-width="1.5"/><path d="M8 14c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round"/><path d="M10 18l4-4 4 4" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="19" r="1.5" fill="var(--green)"/></svg>
+          <span>EcoConnect<span class="accent">-X</span></span>
+        </div>
+        <p>Smart Waste Monitoring &amp; Recycling Platform</p>
+        <p class="footer-sub">IoT · Flask · MySQL · ESP32 · Leaflet GIS</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <a href="#about">About</a>
+          <a href="#workflow">Architecture</a>
+          <a href="#features">Features</a>
+          <a href="#dashboards">Dashboards</a>
+        </div>
+        <div class="footer-col">
+          <h5>Roles</h5>
+          <a href="#roles">Citizen</a>
+          <a href="#roles">Collector</a>
+          <a href="#roles">Recycler</a>
+          <a href="#roles">Government</a>
+        </div>
+        <div class="footer-col">
+          <h5>Links</h5>
+          <a href="https://eco-connect-1-cy88.onrender.com" target="_blank">Live Demo ↗</a>
+          <a href="https://github.com/SooryaBhat/Eco_Connect" target="_blank">GitHub ↗</a>
+          <a href="#tech">Tech Stack</a>
+          <a href="#future">Roadmap</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>Built with ESP32, Flask, MySQL &amp; a lot of green intent.</p>
+        <p>© 2024 EcoConnect-X — Engineering Project</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
